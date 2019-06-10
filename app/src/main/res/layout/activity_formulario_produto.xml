@@ -34,6 +34,7 @@
         android:id="@+id/botaoSalvar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salvar"/>
+        android:text="Salvar"
+        android:background="@color/botao"/>
 
 </LinearLayout>
