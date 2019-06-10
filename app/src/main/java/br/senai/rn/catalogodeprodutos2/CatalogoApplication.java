@@ -11,7 +11,6 @@ public class CatalogoApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        CriarProdutosDeTeste();
     }
 
     private void CriarProdutosDeTeste() {

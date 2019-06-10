@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,6 +24,7 @@ public class ListaProdutoActivity extends AppCompatActivity {
     private FloatingActionButton botaoAdicionar;
     private ListaProdutoAdapter adapter;
     private ProdutoDAO dao;
+    private Menu Edit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,7 +66,7 @@ public class ListaProdutoActivity extends AppCompatActivity {
 
         listaProdutos = findViewById(R.id.activity_lista_produtos_listview);
         botaoAdicionar = findViewById(R.id.floatingActionButton_btLista);
-
+        Edit = findViewById(R.id.activity_lista_produto_menu_editar);
         configurarAdapter(listaProdutos);
 
         registerForContextMenu(listaProdutos);
@@ -103,6 +105,17 @@ public class ListaProdutoActivity extends AppCompatActivity {
                         }
                     })
                     .setNegativeButton("Não", null)
+                    .show();
+        } if (menuSelecionado == R.id.activity_lista_produto_menu_editar){
+            AdapterView.AdapterContextMenuInfo menuInfo
+                    = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+            final Produto produtoSelecionado = (Produto) adapter.getItem(menuInfo.position);
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Informações do Produto")
+                    .setMessage("Nome: " + produtoSelecionado.getNome()
+                                +"\nPreço: " + produtoSelecionado.getPreco()
+                                +"\nFabricante: " +produtoSelecionado.getFabricante())
                     .show();
         }
 

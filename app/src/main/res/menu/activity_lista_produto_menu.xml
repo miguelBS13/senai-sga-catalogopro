@@ -5,4 +5,8 @@
         android:id="@+id/activity_lista_produto_menu_remover"
         android:title="Remover" />
 
+    <item
+        android:id="@+id/activity_lista_produto_menu_editar"
+        android:title="Ver Informações" />
+
 </menu>

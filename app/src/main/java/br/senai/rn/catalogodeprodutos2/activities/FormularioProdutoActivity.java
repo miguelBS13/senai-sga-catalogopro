@@ -40,7 +40,7 @@ public class FormularioProdutoActivity extends AppCompatActivity {
         });
     }
 
-    private void iniciarProduto() {
+    public void iniciarProduto() {
         dao = new ProdutoDAO();
         if (getIntent().hasExtra("produto")){
             produto = (Produto) getIntent().getSerializableExtra("produto");
