@@ -32,9 +32,10 @@
 
     <Button
         android:id="@+id/botaoSalvar"
+        android:layout_margin="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salvar"
-        android:background="@color/botao"/>
+        android:background="@color/botao"
+        android:text="Salvar" />
 
 </LinearLayout>
