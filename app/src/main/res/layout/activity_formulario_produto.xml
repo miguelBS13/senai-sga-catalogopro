@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:hint="Preço"
-        android:inputType="phone"/>
+        android:inputType="numberDecimal"/>
 
 
     <EditText

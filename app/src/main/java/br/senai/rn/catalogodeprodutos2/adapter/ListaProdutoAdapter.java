@@ -52,7 +52,7 @@ public class ListaProdutoAdapter extends BaseAdapter {
         TextView preco = view.findViewById(R.id.item_produto_preco);
 
         nome.setText(produto.getNome());
-        preco.setText(produto.getPreco());
+        preco.setText("R$: "+ produto.getPreco());
     }
 
     private View criarView(ViewGroup parent) {
